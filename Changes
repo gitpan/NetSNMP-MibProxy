@@ -1,0 +1,10 @@
+$Id: Changes 473 2007-10-11 10:04:39Z nito $
+
+Revision history for NetSNMP-MibProxy
+
+1.0473  11/10/2007
+        Renamed from QND-NetSNMP-MibProxy to NetSNMP-MibProxy
+
+1.0462  9/10/2007
+        First version
+
