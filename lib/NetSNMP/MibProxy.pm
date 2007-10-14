@@ -10,12 +10,12 @@ NetSNMP::MibProxy - Simple pass_persist script for Net-SNMP
 
 =head1 VERSION
 
-Version $Revision: 479 $
+Version $Revision: 480 $
 
 =cut
 
 # Version update ..
-$NetSNMP::MibProxy::VERSION = sprintf "1.%04d", q$Revision: 479 $ =~ /(\d+)/g;
+$NetSNMP::MibProxy::VERSION = sprintf "1.%04d", q$Revision: 480 $ =~ /(\d+)/g;
 
 =head1 SYNOPSIS
 

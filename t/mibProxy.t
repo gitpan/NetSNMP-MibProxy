@@ -6,7 +6,7 @@ use Test::More tests => 32;
 #use Test::More tests => 8;
 
 $ENV{'PATH'} = '/bin:/usr/bin';
-$ENV{'PERL5LIB'} = 'blib/lib';
+#$ENV{'PERL5LIB'} = 'blib/lib';
 
 # Set DEBUG to 1 if you want to see the diag messages
 use constant DEBUG => 0;

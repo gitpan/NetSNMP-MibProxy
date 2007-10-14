@@ -1,6 +1,6 @@
 ---
 name: NetSNMP-MibProxy
-version: 1.0479
+version: 1.0480
 author:
   - 'Nito Martinez <nito@qindel.es>'
 abstract: Simple pass_persist script for Net-SNMP
@@ -21,7 +21,7 @@ requires:
 provides:
   NetSNMP::MibProxy:
     file: lib/NetSNMP/MibProxy.pm
-    version: 1.0479
+    version: 1.0480
 generated_by: Module::Build version 0.2808
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.2.html
