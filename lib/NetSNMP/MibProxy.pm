@@ -3,17 +3,19 @@ package NetSNMP::MibProxy;
 use warnings;
 use strict;
 
+
 =head1 NAME
 
 NetSNMP::MibProxy - Simple pass_persist script for Net-SNMP
 
 =head1 VERSION
 
-Version $Revision: 473 $
+Version $Revision: 479 $
 
 =cut
 
-our $VERSION = sprintf "1.%04d", q$Revision: 473 $ =~ /(\d+)/g;
+# Version update ..
+$NetSNMP::MibProxy::VERSION = sprintf "1.%04d", q$Revision: 479 $ =~ /(\d+)/g;
 
 =head1 SYNOPSIS
 

@@ -2,7 +2,7 @@
 
 use strict;
 use warnings;
-use Test::More 'no_plan';
+use Test::More tests => 32;
 #use Test::More tests => 8;
 
 $ENV{'PATH'} = '/bin:/usr/bin';
@@ -35,14 +35,13 @@ ok(system("blib/script/mibProxy -f /dev/null 2>&1"));
 
 
 # SysDescr is .1.3.6.1.2.1.1.1
-my $sysDescrOid = `snmptranslate -On -IR $sysDescrString`;
-chomp($sysDescrOid);
-ok(! $?);
+my $sysDescrOid = SNMP::translateObj($sysDescrString);
+ok($sysDescrOid);
+my $ifNumberOid = SNMP::translateObj($ifNumberString);
+ok($ifNumberOid);
 
-my $ifNumberOid = `snmptranslate -On -IR $ifNumberString`;
-chomp $ifNumberOid;
-ok(!$?);
-
+SKIP: {
+    skip "Mibs not loaded, please check the translation of $sysDescrString and $ifNumberString", 28 if (!defined($sysDescrOid) and !defined($ifNumberOid));
 my $dir = tempdir('CLEANUP' => CLEAN);
 diag("The temp dir is $dir") if DEBUG;
 my $configFile = new File::Temp('UNLINK' => CLEAN, 'TEMPLATE' => 'mibProxyXXXXX', 'SUFFIX' => '.conf', 'DIR' => $dir);
@@ -112,6 +111,8 @@ is($oid, undef, "Comparison in getnext operation with requested oid and target o
 
 # Close the mibProxy process
 close(*Writer);
+
+}
 
 exit 0;
 

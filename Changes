@@ -1,6 +1,12 @@
-$Id: Changes 473 2007-10-11 10:04:39Z nito $
+$Id: Changes 479 2007-10-14 16:13:06Z nito $
 
 Revision history for NetSNMP-MibProxy
+
+1.0479  14/10/2007
+        Changed lib/NetSNMP/MibProxy.pm to not use the our declaration which breaks the test on perl5.005
+
+1.0478  14/10/2007
+        Changed t/mibProxy.t to not use snmptranslate but the SNMP::tranlateObj method
 
 1.0473  11/10/2007
         Renamed from QND-NetSNMP-MibProxy to NetSNMP-MibProxy

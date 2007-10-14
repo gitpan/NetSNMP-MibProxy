@@ -2,6 +2,7 @@ use Module::Build;
 my $build = Module::Build->new
     (
      module_name => 'NetSNMP::MibProxy',
+     sign => 1,
      license => 'perl',
      dist_author => 'Nito Martinez <nito@qindel.es>',
      create_makefile_pl => 'passthrough',
@@ -16,8 +17,9 @@ my $build = Module::Build->new
 	 'Log::Log4perl' => 0,
 	 'Log::Dispatch::FileRotate' => 0,
 	 'Pod::Usage' => 0,
+	 'Test::Pod::Coverage' => 1.04,
 	 'Proc::ProcessTable' => 0,
-	 'Config::Properties::Simple' => 0,
+	 'Config::Properties::Simple' => 0.14,
 	 'SNMP' => 0,
 	 'File::Temp' => 0,
 	 'IPC::Open2' => 0,
