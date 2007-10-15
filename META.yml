@@ -1,6 +1,6 @@
 ---
 name: NetSNMP-MibProxy
-version: 1.0480
+version: 1.0481
 author:
   - 'Nito Martinez <nito@qindel.es>'
 abstract: Simple pass_persist script for Net-SNMP
@@ -9,6 +9,7 @@ resources:
   license: http://dev.perl.org/licenses/
 requires:
   Config::Properties::Simple: 0.14
+  File::Path: 1.05
   File::Temp: 0
   IPC::Open2: 0
   Log::Dispatch::FileRotate: 0
@@ -17,11 +18,12 @@ requires:
   Proc::ProcessTable: 0
   SNMP: 0
   Test::More: 0
+  Test::Pod: 1.14
   Test::Pod::Coverage: 1.04
 provides:
   NetSNMP::MibProxy:
     file: lib/NetSNMP/MibProxy.pm
-    version: 1.0480
+    version: 1.0481
 generated_by: Module::Build version 0.2808
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.2.html

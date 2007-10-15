@@ -17,11 +17,13 @@ my $build = Module::Build->new
 	 'Log::Log4perl' => 0,
 	 'Log::Dispatch::FileRotate' => 0,
 	 'Pod::Usage' => 0,
+	 'Test::Pod' => 1.14,
 	 'Test::Pod::Coverage' => 1.04,
 	 'Proc::ProcessTable' => 0,
 	 'Config::Properties::Simple' => 0.14,
 	 'SNMP' => 0,
 	 'File::Temp' => 0,
+	 'File::Path' => 1.05,
 	 'IPC::Open2' => 0,
      },
 
